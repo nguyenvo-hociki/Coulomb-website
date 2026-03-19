@@ -67,7 +67,7 @@ export default function WhoWeServe() {
               description={card.description}
               markets={card.markets}
               ctaText={card.ctaText}
-              showIcon={false} // Explicitly disabling icon for this section
+            //   showIcon={false} // Explicitly disabling icon for this section
             />
           ))}
         </div>
