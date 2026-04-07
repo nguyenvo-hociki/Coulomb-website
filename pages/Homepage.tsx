@@ -38,9 +38,9 @@ export default function Homepage() {
         <SolutionsHero />
       </motion.div>
 
-      <motion.div {...fadeInUp} className="w-full">
+      {/* <motion.div {...fadeInUp} className="w-full">
         <CIVerticals />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div {...fadeInUp} className="w-full">
         <HowItWorks />

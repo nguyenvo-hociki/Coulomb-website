@@ -2,21 +2,25 @@
 import Link from "next/link";
 import CTACard from "./CTACard";
 
-export default function GetStarted() {
+interface GetStartedProps {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+}
+
+export default function GetStarted({
+  eyebrow = 'GET STARTED',
+  title = 'Ready to Get Started?',
+  subtitle = 'Contact our engineering team to discuss your application, get a custom system design, or schedule a live demo.',
+}: GetStartedProps) {
   return (
     <section className="bg-gray-100 py-20 px-6 font-sans">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mb-3">
-            GET STARTED
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Contact our engineering team to discuss your application, get a custom system design, or schedule a live demo.
-          </p>
+          <p className="text-xs text-blue-600 font-bold uppercase tracking-widest mb-3">{eyebrow}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
         </div>
 
         {/* Card Grid */}
